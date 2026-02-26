@@ -1,6 +1,7 @@
 import { useState } from "react";
-import Header from "../components/Header";
+import Header from "../components/Layout/Header";
 import Sidebar from "../components/Layout/Sidebar";
+import DashboardTitle from "../components/DashboardTitle";
 
 const Dashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -32,10 +33,8 @@ const Dashboard = () => {
           <Header toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
         </header>
 
-        <h1 className="text-3xl font-serif text-gray-800">Dashboard</h1>
-        <p className="text-gray-400 text-sm mb-8">
-          Plan, prioritize, and accomplish your tasks with ease.
-        </p>
+        {/* Dashboard Title and Action Buttons */}
+        <DashboardTitle/>
 
         {/* Total Projects, Ended Projects */}
         <div className="grid grid-cols-4 gap-6">
