@@ -3,7 +3,7 @@ import { Plus } from 'lucide-react';
 
 const DashboardTitle = () => {
   return (
-    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
       {/* Left Side: Title and Subtitle */}
       <div>
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-1">Dashboard</h1>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "../components/Layout/Header";
 import Sidebar from "../components/Layout/Sidebar";
 import DashboardTitle from "../components/DashboardTitle";
+import StatsCards from "../components/StatsCard";
 
 const Dashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -37,8 +38,9 @@ const Dashboard = () => {
         <DashboardTitle/>
 
         {/* Total Projects, Ended Projects */}
-        <div className="grid grid-cols-4 gap-6">
+        <div className=" gap-6">
           {/* Stats Cards components go here */}
+          <StatsCards/>
         </div>
       </main>
     </div>

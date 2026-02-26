@@ -37,9 +37,9 @@ const Sidebar = ({ setIsSidebarOpen }) => {
   };
 
   return (
-    <div className="w-72 bg-white h-screen flex flex-col p-6 border-r border-gray-100">
+    <div className="w-56 bg-white h-screen flex flex-col p-6 border-r border-gray-100">
 
-      {/* Close Button - শুধু মোবাইলে দেখা যাবে */}
+      {/* Close Button */}
       <button 
         onClick={() => setIsSidebarOpen(false)}
         className="md:hidden absolute right-4 top-6 text-gray-500 hover:text-gray-800"
@@ -107,7 +107,7 @@ const Sidebar = ({ setIsSidebarOpen }) => {
       </div>
 
       {/* Mobile App Download Card */}
-      <div className="bg-[#1a3a32] px-4 py-8 rounded-2xl text-white relative overflow-hidden mt-auto">
+      <div className="bg-[#1a3a32] px-4 py-6 rounded-2xl text-white relative overflow-hidden mt-auto">
         <p className="text-xs font-medium mb-1">Download our Mobile App</p>
         <p className="text-[10px] opacity-60 mb-3">Get easy in another way</p>
         <button className="w-full py-3 bg-[#b8d4a6] text-[#1a3a32] text-xs font-bold rounded-lg">
