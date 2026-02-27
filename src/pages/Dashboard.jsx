@@ -5,6 +5,8 @@ import DashboardTitle from "../components/DashboardTitle";
 import StatsCards from "../components/StatsCard";
 import DashboardCharts from "../components/DashboardCharts";
 import RemindersCard from "../components/RemindersCard";
+import { TeamCollab } from "../components/TeamCollab";
+import ProjectProgress from "../components/ProjectProgress";
 
 const Dashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -43,9 +45,15 @@ const Dashboard = () => {
         <div className=" gap-6">
           {/* Stats Cards components go here */}
           <StatsCards />
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <DashboardCharts />
-            <RemindersCard />
+          <div className="">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <DashboardCharts />
+              <RemindersCard />
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 my-6">
+              <TeamCollab />
+              <ProjectProgress/>
+            </div>
           </div>
         </div>
       </main>
