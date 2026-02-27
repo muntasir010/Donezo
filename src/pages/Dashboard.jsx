@@ -3,6 +3,7 @@ import Header from "../components/Layout/Header";
 import Sidebar from "../components/Layout/Sidebar";
 import DashboardTitle from "../components/DashboardTitle";
 import StatsCards from "../components/StatsCard";
+import DashboardCharts from "../components/DashboardCharts";
 
 const Dashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -41,6 +42,7 @@ const Dashboard = () => {
         <div className=" gap-6">
           {/* Stats Cards components go here */}
           <StatsCards/>
+          <DashboardCharts/>
         </div>
       </main>
     </div>
