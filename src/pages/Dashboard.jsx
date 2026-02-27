@@ -4,6 +4,7 @@ import Sidebar from "../components/Layout/Sidebar";
 import DashboardTitle from "../components/DashboardTitle";
 import StatsCards from "../components/StatsCard";
 import DashboardCharts from "../components/DashboardCharts";
+import RemindersCard from "../components/RemindersCard";
 
 const Dashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -36,13 +37,16 @@ const Dashboard = () => {
         </header>
 
         {/* Dashboard Title and Action Buttons */}
-        <DashboardTitle/>
+        <DashboardTitle />
 
         {/* Total Projects, Ended Projects */}
         <div className=" gap-6">
           {/* Stats Cards components go here */}
-          <StatsCards/>
-          <DashboardCharts/>
+          <StatsCards />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <DashboardCharts />
+            <RemindersCard />
+          </div>
         </div>
       </main>
     </div>
