@@ -23,25 +23,26 @@ Follow these steps to run the project locally:
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
-Navigate to the project directory:
+   git clone (https://github.com/muntasir010/Donezo.git)
+- Navigate to the project directory:
 
-Bash
-cd YOUR_REPO_NAME
-Install dependencies:
+- Bash
+- cd YOUR_REPO_NAME
+- Install dependencies:
 
-Bash
-npm install
-Start the development server:
+- Bash
+- npm install
+- Start the development server:
 
-Bash
-npm run dev
-🔑 Login Credentials
-To test the application, use the following credentials:
+- Bash
+- npm run dev
+  
+ ## 🔑 Login Credentials
+- To test the application, use the following credentials:
 
-Email: user1@example.com
+- Email: user1@example.com
 
-Password: password123
+- Password: password123
 
 ## 📂 Project Structure
 - src/

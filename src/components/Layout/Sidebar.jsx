@@ -107,7 +107,11 @@ const Sidebar = ({ setIsSidebarOpen }) => {
       </div>
 
       {/* Mobile App Download Card */}
-      <div className="bg-[#1a3a32] px-4 py-6 rounded-2xl text-white relative overflow-hidden mt-auto">
+      <div className="bg-[#1a3a32] px-4 py-6 rounded-2xl text-white relative overflow-hidden mt-auto" style={{ 
+        backgroundImage: `url('https://i.ibb.co.com/rfwZ7d7n/background.jpg')`, 
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}>
         <p className="text-xs font-medium mb-1">Download our Mobile App</p>
         <p className="text-[10px] opacity-60 mb-3">Get easy in another way</p>
         <button className="w-full py-3 bg-[#b8d4a6] text-[#1a3a32] text-xs font-bold rounded-lg">

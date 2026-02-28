@@ -2,7 +2,11 @@ import { Pause, Square } from 'lucide-react';
 
 const TimeTracker = () => {
   return (
-    <div className="bg-[#0e2a22] p-6 rounded-2xl text-white relative overflow-hidden group w-full lg:max-w-72 min-h-52 flex flex-col justify-between shadow-lg">
+    <div className="p-6 rounded-2xl text-white relative overflow-hidden group w-full lg:max-w-72 min-h-52 flex flex-col justify-between shadow-lg" style={{ 
+        backgroundImage: `url('https://i.ibb.co.com/rfwZ7d7n/background.jpg')`, 
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}>
       {/* Decorative background waves effect */}
       <div className="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-emerald-500 via-transparent to-transparent scale-150"></div>
       
