@@ -43,10 +43,9 @@ Email: user1@example.com
 
 Password: password123
 
-📂 Project Structure
-Plaintext
-src/
-├── components/     # Reusable UI components (Stats, Charts, Sidebar, etc.)
-├── pages/          # Main pages (Login, Dashboard)
-├── routes/         # Private and Public route logic
-└── assets/         # Images and global styles
+## 📂 Project Structure
+- src/
+- ├── components/     # Reusable UI components (Stats, Charts, Sidebar, etc.)
+- ├── pages/          # Main pages (Login, Dashboard)
+- ├── routes/         # Private and Public route logic
+- └── assets/         # Images and global styles
