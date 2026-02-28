@@ -5,13 +5,13 @@ const projects = [
   { name: 'Onboarding Flow', date: 'Nov 28, 2024', color: 'bg-emerald-500' },
   { name: 'Build Dashboard', date: 'Nov 30, 2024', color: 'bg-orange-400' },
   { name: 'Optimize Page Load', date: 'Dec 5, 2024', color: 'bg-green-500' },
-  { name: 'Create User Profile', date: 'Dec 5, 2024', color: 'bg-amber-500' },
+  { name: 'Create User Profile', date: 'Dec 25, 2024', color: 'bg-amber-500' },
   { name: 'Cross-Browser Testing', date: 'Dec 6, 2024', color: 'bg-indigo-700' },
 ];
 
 const ProjectList = () => {
   return (
-    <div className=' max-w-72 bg-white p-4 mb-6 rounded-xl'>
+    <div className=' w-full lg:max-w-72 bg-white p-4 mb-6 rounded-xl'>
       <div className="flex justify-between items-center mb-6">
         <h3 className="font-bold text-gray-800">Project</h3>
         <button className="text-[10px] border border-gray-200 px-3 py-1 rounded-full font-bold flex items-center gap-1">

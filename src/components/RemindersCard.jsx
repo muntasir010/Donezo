@@ -3,7 +3,7 @@ import { Video } from 'lucide-react';
 
 const RemindersCard = () => {
   return (
-    <div className="bg-white p-6 rounded-[2.5rem] border border-gray-50 shadow-sm flex flex-col justify-between h-full min-h-52">
+    <div className="bg-white p-6 rounded-2xl border border-gray-50 shadow-sm flex flex-col justify-between h-full min-h-52">
       {/* Title */}
       <div>
         <h3 className="text-gray-800 font-bold text-lg mb-4">Reminders</h3>

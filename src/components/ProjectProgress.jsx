@@ -3,7 +3,7 @@ const ProjectProgress = () => {
 
   return (
     <div className="flex items-center justify-center">
-      <div className="bg-white w-80 p-6 rounded-2xl shadow-lg">
+      <div className="bg-white w-full lg:w-80 p-6 rounded-2xl shadow-lg">
         <h3 className="text-gray-700 font-semibold mb-6">
           Project Progress
         </h3>

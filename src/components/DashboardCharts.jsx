@@ -23,11 +23,11 @@ const DashboardCharts = () => {
 
   return (
     // Bar Chart Container
-    <div className=" bg-white p-6 rounded-[2.5rem] border border-gray-50 shadow-sm">
+    <div className="bg-white p-6 rounded-2xl border border-gray-50 shadow-sm">
       <div className="flex justify-between items-center mb-6">
         <h3 className="text-xl font-bold text-gray-800">Project Analytics</h3>
       </div>
-      <div className="flex items-end justify-between h-48 max-w-96 gap-3 px-2">
+      <div className="flex items-end justify-between h-48 max-w-xs gap-3 px-2">
         {data?.analytics?.map((item, index) => {
           const maxViews = Math.max(...data.analytics.map((a) => a.views));
           const barHeight = (item.views / maxViews) * 100;

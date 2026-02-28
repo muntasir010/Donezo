@@ -12,77 +12,70 @@ import TimeTracker from "../components/TimeTracker";
 
 const Dashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   return (
-    <div className="flex min-h-screen">
-      {/* Fixed Sidebar */}
+    <div className="flex h-screen overflow-hidden bg-[#f9fbf9]">
+      
+      {/* Mobile Overlay */}
       {isSidebarOpen && (
         <div
-          className="fixed inset-0 bg-black/20 z-30 md:hidden"
+          className="fixed inset-0 bg-black/40 z-50 md:hidden transition-opacity"
           onClick={() => setIsSidebarOpen(false)}
         ></div>
       )}
 
       {/* Sidebar */}
-      <div
+      <aside
         className={`
-      fixed md:relative z-40 transition-transform duration-300
-      ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} 
-      md:translate-x-0
-    `}
+          fixed md:relative z-50 h-full w-64 transition-transform duration-300 transform
+          ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} 
+          md:translate-x-0 bg-white border-r border-gray-100
+        `}
       >
         <Sidebar setIsSidebarOpen={setIsSidebarOpen} />
-      </div>
+      </aside>
 
-      {/* Main Content Area */}
-      <main className="flex-1 md:px-6 py-2 overflow-y-auto">
-        {/* Header (Search bar, User profile) */}
-        <header className="mb-8">
+      {/* Main Content*/}
+      <div className="flex-1 flex flex-col h-full overflow-hidden">
+        
+        {/* Header */}
+        <header className="sticky top-0 z-40 w-full px-4 md:px-6 py-4 bg-[#f9fbf9]/80 backdrop-blur-md border-b border-gray-50">
           <Header toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
         </header>
 
-        {/* Total Projects, Ended Projects */}
-        <div className="bg-gray-100 p-4 rounded-xl gap-6">
-          {/* Dashboard Title and Action Buttons */}
-          <DashboardTitle />
-          {/* Stats Cards components go here */}
-          <StatsCards />
-          {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div className="col-span-2">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <DashboardCharts />
-                <RemindersCard />
-              </div>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 my-6">
-                <TeamCollab />
-                <ProjectProgress />
-              </div>
-            </div>
-            <div className=" gap-6 my-6">
-              <ProjectList />
-              <TimeTracker />
-            </div>
-          </div> */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
-            {/* Column 1: Analytics (div 1) & Team (div 2) */}
-            <div className="flex flex-col gap-6">
-              <DashboardCharts /> {/* div 1 */}
-              <TeamCollab /> {/* div 2 */}
-            </div>
+        {/* Scrollable Content */}
+        <main className="flex-1 overflow-y-auto p-4 md:p-6 custom-scrollbar">
+          <div className="max-w-6xl mx-auto">
+            
+            {/* Dashboard Title & Stats */}
+            <DashboardTitle />
+            <StatsCards />
 
-            {/* Column 2: Reminders (div 1) & Progress (div 2) */}
-            <div className="flex flex-col gap-6">
-              <RemindersCard /> {/* div 1 */}
-              <ProjectProgress /> {/* div 2 */}
-            </div>
+            {/* Grid Layout */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
+              
+              {/* Left & Middle Columns */}
+              <div className="lg:col-span-2 flex flex-col gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <DashboardCharts />
+                  <RemindersCard />
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <TeamCollab />
+                  <ProjectProgress />
+                </div>
+              </div>
 
-            {/* Column 3: Project List (div 3 Large) & Time Tracker (div 3 Small) */}
-            <div className="flex flex-col gap-6 h-full">
-              <ProjectList /> {/* div 3 - Large */}
-              <TimeTracker /> {/* div 3 - Small */}
+              {/* Right Column */}
+              <div className="flex flex-col gap-6">
+                <ProjectList />
+                <TimeTracker />
+              </div>
+
             </div>
           </div>
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
   );
 };
