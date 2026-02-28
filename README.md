@@ -1,16 +1,52 @@
-# React + Vite
+# Donezo - Task Management Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Live Demo
+**Live Link:** https://donezo-indol.vercel.app
 
-Currently, two official plugins are available:
+## ✨ Features
+- **Secure Authentication:** Implementation of JWT-based login system.
+- **Protected Routes:** Unauthorized users are redirected to the login page.
+- **Public Routes:** Logged-in users are prevented from accessing the login page.
+- **Data Visualization:** Project analytics displayed using custom bar charts and progress rings.
+- **Responsive Design:** Fully functional on Mobile, Tablet, and Desktop devices.
+- **Modern UI:** Built with Tailwind CSS for a sleek, professional look.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
+- **Framework:** React.js (Vite)
+- **Styling:** Tailwind CSS
+- **Icons:** Lucide React
+- **API Handling:** Axios
+- **Routing:** React Router DOM
 
-## React Compiler
+## 📥 Installation & Setup
+Follow these steps to run the project locally:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
+Navigate to the project directory:
 
-## Expanding the ESLint configuration
+Bash
+cd YOUR_REPO_NAME
+Install dependencies:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Bash
+npm install
+Start the development server:
+
+Bash
+npm run dev
+🔑 Login Credentials
+To test the application, use the following credentials:
+
+Email: user1@example.com
+
+Password: password123
+
+📂 Project Structure
+Plaintext
+src/
+├── components/     # Reusable UI components (Stats, Charts, Sidebar, etc.)
+├── pages/          # Main pages (Login, Dashboard)
+├── routes/         # Private and Public route logic
+└── assets/         # Images and global styles
